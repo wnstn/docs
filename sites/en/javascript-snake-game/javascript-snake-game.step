@@ -32,7 +32,7 @@ markdown <<-MARKDOWN
   
   * Open game/snake.js in your text editor
   * Open game/index.html in your browser
-  * Open your browser's javascript console
+  * Open your browser's javascript console (see below for helpful information on this)
   * type `alert("hello world");` in your browser's javascript console and
   dismiss the window that pops up
 
@@ -47,10 +47,10 @@ markdown <<-MARKDOWN
 
   ### Helpful Links
 
-  * <a href="https://developers.google.com/chrome-developer-tools/">How to launch dev tools in chrome.</a>
-  * <a href="http://www.microsoft.com/en-us/download/details.aspx?id=18359">How to launch dev tools in internet explorer.</a>
-  * <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Setting_up">How to launch dev tools in firefox.</a>
-  * <a href="https://developer.apple.com/library/safari/documentation/Tools/Conceptual/SafariExtensionGuide/UsingExtensionBuilder/UsingExtensionBuilder.html">How to launch dev tools in safari.</a>
+  * <a href="https://developer.chrome.com/devtools">How to launch dev tools in chrome.</a>
+  * <a href="https://msdn.microsoft.com/en-us/library/ie/bg182326.aspx">How to launch dev tools in internet explorer.</a>
+  * <a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">How to launch dev tools in firefox.</a>
+  * <a href="https://developer.apple.com/library/mac/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html">How to launch dev tools in safari.</a>
 MARKDOWN
 
 next_step 'lesson-2'
