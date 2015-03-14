@@ -13,7 +13,7 @@ markdown <<-MARKDOWN
   ```js
   var drawableSnake = { color: "green", pixels: snake };
   var drawableObjects = [drawableSnake];
-  CHUNK.draw([drawableSnake]);
+  CHUNK.draw(drawableObjects);
   ```
 
   CHUNK's `draw` function expects to be given a collection of objects. This
@@ -58,6 +58,29 @@ markdown <<-MARKDOWN
   * Start and end a game
   * Check for things running into each other
   * Be reasonably approachable for novice developers
+
+  ### Understanding the Code
+
+  The code you wrote used the CHUNK library to draw a 1px snake on the screen. Let's try to understand the code as a whole a bit better.
+
+  ```js
+  var snake = [{ top: 0, left: 0}];
+  var drawableSnake = { color: "green", pixels: snake };
+  var drawableObjects = [drawableSnake];
+  CHUNK.draw(drawableObjects);
+  ```
+
+  The first line declares a variable `snake` and assigns some data to it. The data has a specific structure which we'll use in later lessons to make the snake move. The square brackets `[ ]` create a type of Javascript data called an Array. Arrays can have multiple comma-separated values like `["one",  "two", "three"]`, but in our case we're only putting in one value, which is wrapped in `{ }` curly-braces. The curly-braces represent another Javascript data type called an Object. 
+
+  Objects and arrays are two very common data types in Javascript and we'll be using them a lot, so it's worth understanding them a bit. An array, designated by the `[ ]` (square-brackets), is a list of data that can be referenced by its index. The index is the position inside the array, each separated by a comma. Arrays use 0-based indices, so the first element in an array is at Index 0, the second is at index 1, and so on. If you had the array above as a variable: `var foo = ["one", "two", "three"];`, to get the string "two" in Javascript, you would type `foo[1]`, which Javascript understands to mean "get the value at index 1 in the array foo."
+
+  An Object, designated by the `{ }` (curly-braces) works slightly differently. Data stored in an object involves two parts, a key and a value. In our code, we have two pieces of data in the object, a `top` value and a `left` value. The key is used to get the data from the object. So in our example, if we need to know what the current `left` value of snake is, we type `snake.left` which will return a value of `0`.
+
+  On the second line, we declare the variable `drawableSnake` and assign an object to its value. The object has two pieces, the first has the key `color` and the value `"green"`, and the second has the key `pixels` which has the value `snake`. `snake` is the variable we defined on the previous line, which means `drawableSnake.pixels` will return us the object we created on the first line.
+
+  The third line declares a variable `drawableObjects`, which we assign the value of an array whose only data is the `drawableSnake` declared on the previous line. 
+
+  Finally, we call the CHUNK library's built-in function `draw` and pass it the argument `drawableObjects` which was declared on the previous line. We'll explore functions and arguments in future lessons. 
 
   ### Syntax Breakdown
 
